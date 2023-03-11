@@ -11,7 +11,9 @@ btn.addEventListener("click", () => {
     function sumSquare(num) {
         for (var i = 1; i <= num; i++) {
             sumSquareLet += Math.pow(i, 2);
-            i < num ? i === 1 ? div.innerHTML += `${i}² ` : div.innerHTML += `+ ${i}² ` : div.innerHTML += `+ ${num}² = ${sumSquareLet} <br>`;
+            if (num == 1) {
+                div.innerHTML += `${num}² = ${sumSquareLet} <br>`;
+            } else i < num ? i === 1 ? div.innerHTML += `${i}² ` : div.innerHTML += `+ ${i}² ` : div.innerHTML += `+ ${num}² = ${sumSquareLet} <br>`;
         }
         return sumSquareLet;
     }
@@ -19,7 +21,11 @@ btn.addEventListener("click", () => {
     function squareSum(num) {
         for (var i = 1; i <= num; i++) {
             squareSumLet += i;
-            i < num ? i === 1 ? div.innerHTML += `(${i} ` : div.innerHTML += `+ ${i} ` : div.innerHTML += `+ ${num})² = ${Math.pow(squareSumLet, 2)} <br>`;
+            if (num == 1) {
+                div.innerHTML += `${num}² = ${num} <br>`;
+            } else i < num ? i === 1 ? div.innerHTML += `(${i} ` : div.innerHTML += `+ ${i} ` : div.innerHTML += `+ ${num})² = ${Math.pow(squareSumLet, 2)} <br>`;
+
+
         }
         return Math.pow(squareSumLet, 2);
     }
