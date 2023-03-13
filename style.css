@@ -29,6 +29,7 @@ main {
 
 .input {
     font-family: 'Poppins', sans-serif;
+    padding: 5px;
     font-size: 20px;
     width: 140px;
 }
